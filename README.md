@@ -16,10 +16,11 @@ REST-Rant is an app where users can review restaurants.
 | DELETE | /places/:id/rant/:rantId | Delete a rant (comment) about a particular place |
 | GET    | *                        | 404 page (matches any route not defined above)   |
 
-| Name | City | State | Cuisines | Picture |
-| --- | --- | --- | --- | --- |
-| Texas RoadHouse | Burlington | NC | Steak/Burgers | img ref |
-| Longhorn Steakhouse | Burlington | NC | Steak | img ref |
-| Burger Warfare | Greensboro | NC | Burgers | img ref |
-
+| Field | Type |
+| ---------- | ----- |
+| name | String |
+| city | String |
+| state | String |
+| cuisines | String |
+| pic | String |
 
