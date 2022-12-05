@@ -6,3 +6,9 @@ h1 {
     background-color: cornflowerblue;
     color: whitesmoke;
   }
+
+  #error-img {
+    width: 500px;
+    height: 500px;
+    
+  }
