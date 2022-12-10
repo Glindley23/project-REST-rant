@@ -6,7 +6,7 @@ function show (data) {
         <Def>
             <main>
                 <h1>{data.place.name}</h1>
-                <img src={data.place.pic} />
+                <img src={data.place.pic} alt={data.place.name} />
                 <div><h2>Rating</h2>
                     <p>unrated</p>
                 </div>
@@ -26,11 +26,11 @@ function show (data) {
                        
                 </h4>
                 <div class="dropdown">
-                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <button className="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         Cuisines
                     </button>
                     <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
-                        <button class="dropdown-item" type="button"> {data.place.cuisines} </button>
+                        <button className="dropdown-item" type="button"> {data.place.cuisines} </button>
 
                     </div>
                 </div>
