@@ -14,6 +14,10 @@ h1 {
   color: cornflowerblue;
 }
 
+h2 {
+  color: aqua;
+}
+
 .btn-primary {
   background-color: cornflowerblue;
   color: whitesmoke;

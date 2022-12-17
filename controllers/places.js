@@ -54,7 +54,7 @@ router.delete('/:id', (req, res) => {
 })
 
 router.get('/:id/edit', (req, res) => {
-  router.send('GET edit form stub')
+  res.send('GET edit form stub')
 })
 
 router.post('/:id/rant', (req, res) => {
