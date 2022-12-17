@@ -27,6 +27,11 @@ h2 {
   width: 400px;
 }
 
+#show-content {
+  width: 40%;
+  margin-left: 70px;
+}
+
 #error-img {
   width: 500px;
   height: 500px;
