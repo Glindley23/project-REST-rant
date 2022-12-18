@@ -7,6 +7,22 @@ function show(data) {
             No comments yet!
         </h3>
     )
+    let rating = (
+        <h3 className='inactive'>
+            Not yet rated
+        </h3>
+    )
+    if (data.place.comments.length) {
+        let sumRatings = data.place.comments.reduce((tot, c) => {
+            return tot + c.stars
+        }, 0)
+        let averageRating = sumRatings/ data.place.comments.length
+        rating = (
+            <h3>
+                {Math.round(averageRating)} Stars
+            </h3>
+        )
+    }
     if (data.place.comments.length) {
         comments = data.place.comments.map(c => {
             return (
@@ -43,7 +59,7 @@ function show(data) {
                                 Signature Cuisines: {data.place.cuisines}
                             </h4>
                             <h2>Rating: </h2>
-                            <h3>No Ratings yet</h3>
+                            <h3>{rating}</h3>
                             <div className='row'>
                                 <div className='col-sm-6'>
                                     <a href={`/places/${data.id}/edit`} className="btn btn-warning row">
