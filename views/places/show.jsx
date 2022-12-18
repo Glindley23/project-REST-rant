@@ -37,6 +37,10 @@ function show(data) {
                         <strong>- {c.author}</strong>
                     </h3>
                     <h4>Rating: {c.stars}/5</h4>
+
+                    <form method='POST' action={`/places/${data.place.id}/comment/${c.id}?_method=DELETE`}>
+                        <input type='submit' className='btn btn-danger' value='Delete Comment'/>
+                    </form>
                 </div>
             )
         })
@@ -65,17 +69,22 @@ function show(data) {
                             <h2>Rating: </h2>
                             <h3>{rating}</h3>
                             <div className='row'>
-                                <div className='col-sm-6'>
-                                    <a href={`/places/${data.place.id}/edit`} className="btn btn-warning row">
+                                <div className='col-sm-4'>
+                                    <a href={`/places/${data.place.id}/edit`} className="btn btn-warning">
                                         Edit
                                     </a>
                                 </div>
-                                <div className='col-sm-6'>
+                                <div className='col-sm-4'>
                                     <form method="POST" action={`/places/${data.place.id}?_method=DELETE`}>
                                         <button type="submit" className="btn btn-danger">
                                             Delete
                                         </button>
                                     </form>
+                                </div>
+                                <div className='col-sm-4'>
+                                    <a href={`/places/${data.place.id}/comment`} className="btn btn-warning">
+                                        New Comment
+                                    </a>
                                 </div>
                             </div>
 
