@@ -22,7 +22,6 @@ app.get('/', (req, res) => {
 })
 
 app.get('*', (req, res) => {
-    console.log('star')
     res.render('error404')
 })
 

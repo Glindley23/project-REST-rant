@@ -63,3 +63,7 @@ nav a:hover {
   color: pink;
   text-decoration: none;
 }
+
+#rant {
+  margin: 10px;
+}
